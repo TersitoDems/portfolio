@@ -170,14 +170,27 @@
             letter-spacing: 1px;
         }
         .portfolio-pic {
-    max-width: 100%;       /* Prevents the image from overflowing the page */
-    height: auto;          /* Maintains the image's original proportions */
+    max-width: 320px;      /* Caps the width so a vertical photo doesn't look huge */
+    width: 100%;           /* Allows it to scale down safely on small mobile screens */
+    height: auto;          /* Keeps your photo from stretching or distorting */
     display: block;
-    margin: 20px auto;     /* Centers the image with some spacing around it */
-    border: 1px solid var(--border-color); /* Matches your dark ink border */
-    padding: 5px;          /* Creates a traditional frame gap around the photo */
-    background-color: #fff;/* Adds a white border mat behind the photo */
-    box-shadow: 4px 4px 0px var(--border-color); /* Vintage drop shadow */
+    margin: 25px auto;     /* Centers the photo and adds clean spacing above/below */
+    border: 1px solid var(--border-color);
+    padding: 5px;
+    background-color: #fff;
+    box-shadow: 4px 4px 0px var(--border-color);
+}
+        .about-container {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+/* This forces the text and image to stack safely on mobile screens */
+@media (max-width: 600px) {
+    .about-container {
+        flex-direction: column;
+    }
 }
     </style>
 </head>
@@ -204,10 +217,12 @@
         </section>
 
         <section id="about">
-            <h2>Biography</h2>
-            <img src="Me.jpg" alt="Teresito Demol Jr." class="portfolio-pic">
-            <p>Hello, I am Teresito. This space serves as a digital journal and exhibition of my work, blends of traditional layouts, and modern execution. I believe in clean syntax, structured layout, and purposeful design. Right Now, I am still studying as a Student Nurse Incoming 2nd Year. </p>
-        </section>
+    <h2>Biography</h2>
+    <div class="about-container">
+        <p>Hello, I am Teresito. This space serves as a digital journal and exhibition of my work... Right Now, I am still studying as a Student Nurse Incoming 2nd Year.</p>
+        <img src="image_4a86be.jpg" alt="Teresito Demol Jr." class="portfolio-pic">
+    </div>
+</section>
 
         <section id="work">
             <h2>Selected Works</h2>

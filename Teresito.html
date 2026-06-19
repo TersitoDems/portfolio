@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teresito Demol Jr. | Portfolio</title>
+    <style>
+        /* --- VINTAGE ESTHETIC SETUP --- */
+        :root {
+            --bg-color: #f5f2eb;       /* Warm cream/parchment paper */
+            --text-color: #2e2a27;     /* Deep charcoal sepia */
+            --accent-color: #8c2d19;   /* Muted vintage burgundy */
+            --border-color: #4a423d;   /* Classic dark ink */
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            font-family: "Georgia", "Times New Roman", serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.7;
+        }
+
+        /* --- HEADER & LOGO --- */
+        header {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 30px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 4px double var(--border-color);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 25px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--text-color);
+            text-transform: uppercase;
+            font-size: 0.9rem;
+            letter-spacing: 2px;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: var(--accent-color);
+        }
+
+        /* Stylistic Vintage Logo (Top Right) */
+        .logo-box {
+            border: 2px solid var(--border-color);
+            padding: 5px 15px;
+            background-color: transparent;
+            position: relative;
+        }
+
+        .logo-box::before {
+            content: '';
+            position: absolute;
+            top: 2px;
+            left: 2px;
+            right: 2px;
+            bottom: 2px;
+            border: 1px dashed var(--border-color);
+            pointer-events: none;
+        }
+
+        .logo-text {
+            font-size: 1.6rem;
+            font-weight: bold;
+            letter-spacing: 4px;
+            font-style: italic;
+            color: var(--text-color);
+            text-decoration: none;
+            display: block;
+        }
+
+        /* --- MAIN CONTENT --- */
+        main {
+            max-width: 800px;
+            margin: 60px auto;
+            padding: 0 20px;
+        }
+
+        /* Hero Section */
+        .hero {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 10px;
+            font-weight: normal;
+            letter-spacing: 1px;
+        }
+
+        .hero p {
+            font-style: italic;
+            font-size: 1.2rem;
+            color: var(--accent-color);
+            margin-top: 0;
+        }
+
+        .divider {
+            text-align: center;
+            margin: 40px 0;
+            font-size: 1.5rem;
+            letter-spacing: 5px;
+            color: var(--border-color);
+        }
+
+        /* Sections */
+        section {
+            margin-bottom: 50px;
+        }
+
+        h2 {
+            font-size: 1.8rem;
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 5px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        /* Portfolio Grid */
+        .portfolio-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            margin-top: 20px;
+        }
+
+        @media (max-width: 600px) {
+            .portfolio-grid {
+                grid-template-columns: 1fr;
+            }
+            header {
+                flex-direction: column-reverse;
+                gap: 20px;
+            }
+        }
+
+        .project-card {
+            border: 1px solid var(--border-color);
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.2);
+            box-shadow: 3px 3px 0px var(--border-color);
+        }
+
+        .project-card h3 {
+            margin-top: 0;
+            color: var(--accent-color);
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 40px 20px;
+            font-size: 0.9rem;
+            border-top: 1px dashed var(--border-color);
+            max-width: 1100px;
+            margin: 0 auto;
+            letter-spacing: 1px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <nav class="nav-links">
+            <a href="#about">About</a>
+            <a href="#work">Work</a>
+            <a href="#contact">Contact</a>
+        </nav>
+        
+        <div class="logo-box">
+            <a href="#" class="logo-text">TDJ</a>
+        </div>
+    </header>
+
+    <main>
+        
+        <section class="hero">
+            <h1>Teresito Demol Jr.</h1>
+            <p>Welcome to my personal archive & portfolio</p>
+            <div class="divider">❖ ❖ ❖</div>
+        </section>
+
+        <section id="about">
+            <h2>Biography</h2>
+            <p>Hello, I am Teresito. This space serves as a digital journal and exhibition of my work, blends of traditional layouts, and modern execution. I believe in clean syntax, structured layout, and purposeful design. Right Now, I am still studying as a Student Nurse Incoming 2nd Year. </p>
+        </section>
+
+        <section id="work">
+            <h2>Selected Works</h2>
+            <div class="portfolio-grid">
+                
+                <div class="project-card">
+                    <h3>Project Title One</h3>
+                    <p>A brief description of your project or clinical case study. Built with simple structures and vintage aesthetics.</p>
+                </div>
+
+                <div class="project-card">
+                    <h3>Project Title Two</h3>
+                    <p>Another item showcase. You can add as many of these cards inside the grid as you see fit.</p>
+                </div>
+
+            </div>
+        </section>
+
+        <section id="contact">
+            <h2>Correspondence</h2>
+            <p>Should you wish to collaborate, discuss a project, or simply say hello, feel free to reach out via email.</p>
+            <p><strong>Email:</strong> teresitobusiness@gmail.com</p>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Teresito Demol Jr. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>

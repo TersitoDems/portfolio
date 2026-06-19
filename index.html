@@ -169,6 +169,16 @@
             margin: 0 auto;
             letter-spacing: 1px;
         }
+        .portfolio-pic {
+    max-width: 100%;       /* Prevents the image from overflowing the page */
+    height: auto;          /* Maintains the image's original proportions */
+    display: block;
+    margin: 20px auto;     /* Centers the image with some spacing around it */
+    border: 1px solid var(--border-color); /* Matches your dark ink border */
+    padding: 5px;          /* Creates a traditional frame gap around the photo */
+    background-color: #fff;/* Adds a white border mat behind the photo */
+    box-shadow: 4px 4px 0px var(--border-color); /* Vintage drop shadow */
+}
     </style>
 </head>
 <body>
@@ -195,6 +205,7 @@
 
         <section id="about">
             <h2>Biography</h2>
+            <img src="Me.jpg" alt="Teresito Demol Jr." class="portfolio-pic">
             <p>Hello, I am Teresito. This space serves as a digital journal and exhibition of my work, blends of traditional layouts, and modern execution. I believe in clean syntax, structured layout, and purposeful design. Right Now, I am still studying as a Student Nurse Incoming 2nd Year. </p>
         </section>
 
